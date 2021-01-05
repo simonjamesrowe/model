@@ -1,6 +1,7 @@
 package com.simonjamesrowe.model
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.module.kotlin.convertValue
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
@@ -10,6 +11,7 @@ import java.time.LocalDateTime
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class Event(
   val event: String,
+  @field:JsonProperty("created_at")
   val createdAt: LocalDateTime,
   val model: String,
   val entry: JsonNode
