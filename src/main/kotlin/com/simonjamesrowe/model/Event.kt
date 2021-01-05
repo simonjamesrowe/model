@@ -6,13 +6,13 @@ import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.module.kotlin.convertValue
 import com.fasterxml.jackson.module.kotlin.jacksonObjectMapper
 import com.simonjamesrowe.model.EventUtils.MODEL_BLOG
-import java.time.LocalDateTime
+import java.time.ZonedDateTime
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class Event(
   val event: String,
   @field:JsonProperty("created_at")
-  val createdAt: LocalDateTime,
+  val createdAt: ZonedDateTime,
   val model: String,
   val entry: JsonNode
 ) {
