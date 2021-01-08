@@ -1,4 +1,4 @@
-package com.simonjamesrowe.model
+package com.simonjamesrowe.model.data
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
