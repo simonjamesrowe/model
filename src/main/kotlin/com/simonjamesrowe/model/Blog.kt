@@ -13,5 +13,6 @@ data class Blog(
   val skills: List<Skill>,
   val shortDescription: String,
   val title: String,
-  val content: String
+  val content: String,
+  val image: Image
 )
