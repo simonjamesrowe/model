@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 @JsonIgnoreProperties(ignoreUnknown = true)
 data class Image(
   val url: String,
-  val name: String,
+  val name: String?,
   val size: Int,
   val width: Int,
   val height: Int,
