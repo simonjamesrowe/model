@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import java.time.ZonedDateTime
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Skill(
+data class SkillsGroup(
   val id: String,
   val name: String,
   val createdAt: ZonedDateTime,
@@ -12,5 +12,6 @@ data class Skill(
   val description: String,
   val rating: Double,
   val order: Int? = null,
-  val image: Image
+  val image: Image,
+  val skills: List<Skill>
 )

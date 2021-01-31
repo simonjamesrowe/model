@@ -1,16 +1,21 @@
 package com.simonjamesrowe.model.data
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
+import java.time.LocalDate
 import java.time.ZonedDateTime
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Skill(
+data class Job(
   val id: String,
-  val name: String,
+  val title: String,
+  val company: String,
+  val companyUrl: String?,
+  val shortDescription: String,
+  val longDescription: String,
+  val companyImage: Image,
   val createdAt: ZonedDateTime,
   val updatedAt: ZonedDateTime,
   val description: String,
-  val rating: Double,
-  val order: Int? = null,
-  val image: Image
+  val startDate: LocalDate,
+  val endDate: LocalDate?
 )
