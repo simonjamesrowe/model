@@ -11,11 +11,10 @@ data class Job(
   val company: String,
   val companyUrl: String?,
   val shortDescription: String,
-  val longDescription: String,
+  val longDescription: String?,
   val companyImage: Image,
   val createdAt: ZonedDateTime,
   val updatedAt: ZonedDateTime,
-  val description: String,
   val startDate: LocalDate,
   val endDate: LocalDate?
 )
