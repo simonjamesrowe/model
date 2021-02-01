@@ -9,7 +9,7 @@ data class Skill(
   val name: String,
   val createdAt: ZonedDateTime,
   val updatedAt: ZonedDateTime,
-  val description: String,
+  val description: String?,
   val rating: Double,
   val order: Int? = null,
   val image: Image
