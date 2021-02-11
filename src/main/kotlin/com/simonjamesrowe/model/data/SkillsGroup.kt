@@ -14,4 +14,4 @@ data class SkillsGroup(
   val order: Int? = null,
   val image: Image,
   val skills: List<Skill>
-)
+) : CMSObject

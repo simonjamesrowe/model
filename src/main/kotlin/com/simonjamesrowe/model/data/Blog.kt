@@ -15,4 +15,4 @@ data class Blog(
   val title: String,
   val content: String,
   val image: Image
-)
+) : CMSObject

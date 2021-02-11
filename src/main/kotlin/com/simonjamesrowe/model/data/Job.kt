@@ -17,4 +17,4 @@ data class Job(
   val updatedAt: ZonedDateTime,
   val startDate: LocalDate,
   val endDate: LocalDate?
-)
+) : CMSObject

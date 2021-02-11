@@ -13,4 +13,4 @@ data class Skill(
   val rating: Double,
   val order: Int? = null,
   val image: Image
-)
+) : CMSObject
