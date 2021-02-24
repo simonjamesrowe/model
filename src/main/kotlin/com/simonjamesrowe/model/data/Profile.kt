@@ -7,6 +7,7 @@ data class Profile(
   val id: String,
   val name: String,
   val title: String,
+  val headline: String,
   val description: String,
   val location: String,
   val phoneNumber: String,
