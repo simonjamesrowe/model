@@ -12,5 +12,6 @@ data class Skill(
   val description: String?,
   val rating: Double,
   val order: Int? = null,
-  val image: Image
+  val image: Image,
+  val includeOnResume: Boolean
 ) : CMSObject

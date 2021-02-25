@@ -16,5 +16,7 @@ data class Job(
   val createdAt: ZonedDateTime,
   val updatedAt: ZonedDateTime,
   val startDate: LocalDate,
-  val endDate: LocalDate?
+  val endDate: LocalDate?,
+  val includeOnResume: Boolean,
+  val education: Boolean
 ) : CMSObject
