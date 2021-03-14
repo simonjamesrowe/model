@@ -1,10 +1,10 @@
-package com.simonjamesrowe.model.data
+package com.simonjamesrowe.model.cms.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import java.time.ZonedDateTime
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Skill(
+data class SkillResponseDTO(
   val id: String,
   val name: String,
   val createdAt: ZonedDateTime,
@@ -12,6 +12,6 @@ data class Skill(
   val description: String?,
   val rating: Double,
   val order: Int? = null,
-  val image: Image,
+  val image: ImageResponseDTO,
   val includeOnResume: Boolean
 ) : CMSObject

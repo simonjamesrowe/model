@@ -1,4 +1,4 @@
-package com.simonjamesrowe.model.data
+package com.simonjamesrowe.model.cms.dto
 
 object Constants {
   const val TYPE_BLOG = "blog"

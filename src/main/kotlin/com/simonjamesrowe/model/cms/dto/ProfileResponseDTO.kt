@@ -1,9 +1,9 @@
-package com.simonjamesrowe.model.data
+package com.simonjamesrowe.model.cms.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Profile(
+data class ProfileResponseDTO(
   val id: String,
   val name: String,
   val title: String,

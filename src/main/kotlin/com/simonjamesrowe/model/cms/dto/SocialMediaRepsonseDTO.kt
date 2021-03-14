@@ -1,9 +1,9 @@
-package com.simonjamesrowe.model.data
+package com.simonjamesrowe.model.cms.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class SocialMedia(
+data class SocialMediaRepsonseDTO(
   val id: String,
   val type: String,
   val link: String,

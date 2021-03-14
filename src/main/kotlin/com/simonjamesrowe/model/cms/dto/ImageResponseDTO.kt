@@ -1,9 +1,9 @@
-package com.simonjamesrowe.model.data
+package com.simonjamesrowe.model.cms.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Image(
+data class ImageResponseDTO(
   val url: String,
   val name: String?,
   val size: Int,
@@ -14,9 +14,9 @@ data class Image(
 ) {
   @JsonIgnoreProperties(ignoreUnknown = true)
   data class ImageFormats(
-    val thumbnail: Image?,
-    val large: Image?,
-    val medium: Image?,
-    val small: Image?
+    val thumbnail: ImageResponseDTO?,
+    val large: ImageResponseDTO?,
+    val medium: ImageResponseDTO?,
+    val small: ImageResponseDTO?
   )
 }

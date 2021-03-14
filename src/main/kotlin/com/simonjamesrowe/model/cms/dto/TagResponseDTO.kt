@@ -1,15 +1,15 @@
-package com.simonjamesrowe.model.data
+package com.simonjamesrowe.model.cms.dto
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
-import com.fasterxml.jackson.databind.JsonNode
 import java.time.ZonedDateTime
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-data class Event(
-  val event: String,
-  @field:JsonProperty("created_at")
+data class TagResponseDTO(
+  val id: String,
+  val name: String,
   val createdAt: ZonedDateTime,
-  val model: String,
-  val entry: JsonNode
+  val updatedAt: ZonedDateTime,
+  @field:JsonProperty("__v")
+  val version: Int
 )
