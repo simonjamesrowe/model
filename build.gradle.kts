@@ -3,12 +3,15 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.6.2"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
+	id("org.sonarqube") version "3.1.1"
+	id("jacoco")
 	kotlin("jvm") version "1.6.10"
 	kotlin("plugin.spring") version "1.6.10"
 	`maven-publish`
 }
 
 group = "com.simonjamesrowe"
+val gradlePropertiesProp = project.properties
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
@@ -38,5 +41,25 @@ publishing {
 		create<MavenPublication>("maven") {
 			from(components["java"])
 		}
+	}
+}
+
+tasks.withType<Test> {
+	useJUnitPlatform()
+	finalizedBy(tasks.jacocoTestReport)
+}
+
+tasks.jacocoTestReport {
+	dependsOn(tasks.test)
+	reports {
+		xml.isEnabled = true
+	}
+}
+
+sonarqube {
+	properties {
+		property("sonar.coverage.jacoco.xmlReportPaths", "$buildDir/reports/jacoco/test/jacocoTestReport.xml")
+		property("sonar.host.url", gradlePropertiesProp["sonar.host.url"] ?: "")
+		property("sonar.login", gradlePropertiesProp["sonar.login"] ?: "")
 	}
 }
