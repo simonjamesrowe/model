@@ -12,7 +12,7 @@ plugins {
 
 group = "com.simonjamesrowe"
 val gradlePropertiesProp = project.properties
-java.sourceCompatibility = JavaVersion.VERSION_17
+java.sourceCompatibility = JavaVersion.VERSION_16
 
 repositories {
 	maven { url = uri("https://nexus.simonjamesrowe.com/repository/maven-group/") }
