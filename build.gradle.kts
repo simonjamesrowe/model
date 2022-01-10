@@ -12,12 +12,12 @@ plugins {
 
 group = "com.simonjamesrowe"
 val gradlePropertiesProp = project.properties
-java.sourceCompatibility = JavaVersion.VERSION_16
+java.sourceCompatibility = JavaVersion.VERSION_11
 
 tasks.withType<KotlinCompile> {
 	kotlinOptions {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
-		jvmTarget = "16"
+		jvmTarget = "11"
 	}
 }
 
