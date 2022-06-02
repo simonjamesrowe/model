@@ -26,6 +26,7 @@ repositories {
 	mavenCentral()
 }
 
+
 dependencies {
 	api("org.springframework.boot:spring-boot-starter-json")
 	api("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -44,6 +45,16 @@ tasks.getByName<Jar>("bootJar") {
 }
 
 publishing {
+	repositories {
+		maven {
+			name = "GitHubPackages"
+			url = uri("https://maven.pkg.github.com/simonjamesrowe/model")
+			credentials {
+				username = System.getenv("GITHUB_ACTOR")
+				password = System.getenv("GITHUB_TOKEN")
+			}
+		}
+	}
 	publications {
 		create<MavenPublication>("maven") {
 			from(components["java"])
